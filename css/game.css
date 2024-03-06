@@ -1,0 +1,75 @@
+main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: rgb(137, 25, 243);
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 20px 50px;
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 800px;
+  background-color: rgb(45, 16, 112);
+  padding: 30px;
+  margin: 0 0 30px;
+  border-radius: 5px;
+  color: aliceblue;
+  letter-spacing: 3px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.card{
+  aspect-ratio: 3/4;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  transition: all 400ms ease;
+  transform-style: preserve-3d;
+}
+.face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid rgb(69, 12, 143);
+  border-radius: 5px;
+  transition: all 400ms ease;
+}
+.front{
+    transform: rotateY(180deg);
+}
+.back{
+    background-image: url('../img/capa.jpg');
+    backface-visibility: hidden;
+}
+.reveal-card {
+  transform: rotateY(180deg);
+}
+.disabled-card {
+  filter: saturate(0);
+}
+
+input{
+  border-radius: 1rem;
+  padding: 10px;
+  background-color: rgb(220, 28, 150);
+  border: 5px ;
+  cursor: pointer;
+  transition: all 1s;
+}
+input:hover{
+  background-color: rgb(239, 55, 171);
+  color: aliceblue;
+}
